@@ -132,7 +132,7 @@ public class DefaultMowerServiceTest
 
             assertEquals(mower.getPositionX(), 43);
             assertEquals(mower.getPositionY(), 6);
-            assertEquals(mower.getOrientation(), Orientation.E);
+            assertEquals(mower.getOrientation(), Orientation.N);
 
         }
         catch (Throwable e)
