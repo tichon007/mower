@@ -9,6 +9,7 @@ To build and launch unit test :
 To stand alone :
 
 * mvn clean install && java -jar target\original-mower-1.0.0-SHADED.jar -f !!absolute file path ( xml or txt )!!
+	( ex : mvn clean install && java -jar target\original-mower-1.0.0-SHADED.jar -f src\test\resources\mower_case_2.xml ) 
 
 Available test file :
 
