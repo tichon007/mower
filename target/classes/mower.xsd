@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mowitnow.com/generated" xmlns:tns="http://mowitnow.com/generated" elementFormDefault="qualified">
+
+    <complexType name="Grid">
+    	<sequence>
+    		<element name="height" type="int"></element>
+    		<element name="width" type="int"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Mower">
+    	<sequence>
+    		<element name="positionX" type="int" maxOccurs="1" minOccurs="1"></element>
+    		<element name="positionY" type="int" maxOccurs="1" minOccurs="1"></element>
+    		<element name="directions" type="tns:direction" maxOccurs="unbounded" minOccurs="0"></element>
+    		<element name="orientation" type="tns:orientation" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+ 
+
+    <simpleType name="direction">
+    	<restriction base="string">
+    		<enumeration value="G"></enumeration>
+    		<enumeration value="D"></enumeration>
+    		<enumeration value="A"></enumeration>
+    	</restriction>
+    </simpleType>
+    
+    <simpleType name="orientation">
+    	<restriction base="string">
+    		<enumeration value="N"></enumeration>
+    		<enumeration value="S"></enumeration>
+    		<enumeration value="E"></enumeration>
+    		<enumeration value="O"></enumeration>
+    	</restriction>
+    </simpleType>
+    
+
+   
+
+
+    <element name="Root" type="tns:Root"></element>
+
+
+
+
+
+    
+    <complexType name="Root">
+    	<sequence>
+    		<element name="mowers" type="tns:Mower" maxOccurs="unbounded" minOccurs="0"></element>
+    		<element name="grid" type="tns:Grid" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="MowerContainer" type="string"></element>
+</schema>
